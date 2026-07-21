@@ -1,0 +1,65 @@
+/* ===== EFFECTS ===== */
+.sound-effect {
+  position: absolute;
+  top: 15%; right: 10%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  z-index: 15;
+  text-shadow: 2px 2px 0 #333;
+}
+
+.howl-effect { position: absolute; top: 10%; right: 5%; z-index: 15; }
+.howl-effect span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 0 #333, -1px -1px 0 #333;
+  animation: howlPulse 0.6s ease-in-out infinite alternate;
+}
+
+.pop-effect {
+  position: absolute;
+  top: 20%; left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--secondary);
+  z-index: 15;
+  text-shadow: 3px 3px 0 var(--primary);
+  animation: popIn 0.5s ease-out;
+}
+
+.lightbulb-effect {
+  position: absolute;
+  top: 8%; left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+}
+
+.glow-effect { position: relative; }
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.splash-effects {
+  position: absolute;
+  bottom: 15%; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.splash { font-size: 1.5rem; animation: splashBounce 1s ease-in-out infinite; }
+.splash-1 { animation-delay: 0s; }
+.splash-2 { animation-delay: 0.3s; }
+.splash-3 { animation-delay: 0.6s; }
+

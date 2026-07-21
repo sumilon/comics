@@ -1,0 +1,208 @@
+/* ===== ANIMATIONS ===== */
+.float-animation { animation: float 3s ease-in-out infinite; }
+.bounce-animation { animation: bounce 1.5s ease-in-out infinite; }
+.shake-animation { animation: shake 0.5s ease-in-out infinite; }
+.pulse-animation { animation: pulse 1.2s ease-in-out infinite; }
+.run-animation { animation: run 0.4s ease-in-out infinite alternate; }
+.slideIn-animation { animation: slideInFromLeft 0.8s ease-out; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes run {
+  0% { transform: translateX(-5px) rotate(-2deg); }
+  100% { transform: translateX(5px) rotate(2deg); }
+}
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes howlPulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+@keyframes popIn {
+  0% { transform: translateX(-50%) scale(0); opacity: 0; }
+  70% { transform: translateX(-50%) scale(1.3); }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+@keyframes splashBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.2); }
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+@keyframes wobble {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  15% { transform: translateX(-6px) rotate(-3deg); }
+  30% { transform: translateX(4px) rotate(2deg); }
+  45% { transform: translateX(-3px) rotate(-1deg); }
+  60% { transform: translateX(2px) rotate(1deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.9; }
+}
+@keyframes hop {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  30% { transform: translateY(-18px) scaleY(1.05); }
+  50% { transform: translateY(0) scaleY(0.92); }
+  65% { transform: translateY(-6px) scaleY(1.02); }
+}
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(6px, -4px); }
+  50% { transform: translate(0, -8px); }
+  75% { transform: translate(-6px, -4px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(5deg); }
+  40% { transform: rotate(-5deg); }
+  60% { transform: rotate(3deg); }
+  80% { transform: rotate(-3deg); }
+}
+@keyframes grow {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes entrancePop {
+  0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(3deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); transform-origin: top center; }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+}
+@keyframes rippleScale {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.anim-sway { animation: sway 3s ease-in-out infinite; }
+.anim-wobble { animation: wobble 1.5s ease-in-out infinite; }
+.anim-breathe { animation: breathe 4s ease-in-out infinite; }
+.anim-hop { animation: hop 1.2s ease-in-out infinite; }
+.anim-drift { animation: drift 5s ease-in-out infinite; }
+.anim-wiggle { animation: wiggle 0.8s ease-in-out infinite; }
+.anim-grow { animation: grow 0.6s ease-out forwards; }
+.anim-entrance-pop { animation: entrancePop 0.7s ease-out forwards; }
+.anim-swing { animation: swing 2.5s ease-in-out infinite; }
+.anim-ripple-scale { animation: rippleScale 2s ease-in-out infinite; }
+
+/* ===== NEW ANIMATIONS ===== */
+@keyframes headTilt {
+  0%, 100% { transform: rotate(0deg); transform-origin: 50% 70%; }
+  30% { transform: rotate(4deg); }
+  70% { transform: rotate(-3deg); }
+}
+@keyframes tailWag {
+  0%, 100% { transform: rotate(0deg); transform-origin: 100% 50%; }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-8deg); }
+}
+@keyframes squashStretch {
+  0%, 100% { transform: scaleX(1) scaleY(1); }
+  25% { transform: scaleX(1.08) scaleY(0.94); }
+  50% { transform: scaleX(0.95) scaleY(1.06); }
+  75% { transform: scaleX(1.03) scaleY(0.97); }
+}
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(0deg); }
+  75% { transform: translateY(-4px) rotate(-1deg); }
+}
+@keyframes excitedBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-14px) scale(1.02); }
+  40% { transform: translateY(0) scale(0.98); }
+  55% { transform: translateY(-8px) scale(1.01); }
+  70% { transform: translateY(0) scale(0.99); }
+  85% { transform: translateY(-3px) scale(1); }
+}
+@keyframes scaredShiver {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  10% { transform: translateX(-2px) rotate(-1deg); }
+  20% { transform: translateX(3px) rotate(1deg); }
+  30% { transform: translateX(-3px) rotate(-0.5deg); }
+  40% { transform: translateX(2px) rotate(0.5deg); }
+  50% { transform: translateX(-1px) rotate(0); }
+  60% { transform: translateX(1px) rotate(-0.5deg); }
+}
+@keyframes thinkingBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  40% { transform: translateY(-3px) rotate(2deg); }
+  80% { transform: translateY(-1px) rotate(-1deg); }
+}
+@keyframes celebrateJump {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  15% { transform: translateY(-20px) scale(1.05) rotate(-3deg); }
+  30% { transform: translateY(0) scale(0.95) rotate(0deg); }
+  45% { transform: translateY(-12px) scale(1.03) rotate(2deg); }
+  60% { transform: translateY(0) scale(0.97) rotate(0deg); }
+  75% { transform: translateY(-5px) scale(1.01) rotate(-1deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+@keyframes slideInFromRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInFromBottom {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* New animation utility classes */
+.anim-head-tilt { animation: headTilt 3s ease-in-out infinite; }
+.anim-tail-wag { animation: tailWag 1s ease-in-out infinite; }
+.anim-squash { animation: squashStretch 2s ease-in-out infinite; }
+.anim-gentle-float { animation: gentleFloat 4s ease-in-out infinite; }
+.anim-excited-bounce { animation: excitedBounce 1.5s ease-in-out infinite; }
+.anim-scared-shiver { animation: scaredShiver 0.5s ease-in-out infinite; }
+.anim-thinking-bob { animation: thinkingBob 3s ease-in-out infinite; }
+.anim-celebrate { animation: celebrateJump 2s ease-in-out infinite; }
+.anim-slide-right { animation: slideInFromRight 0.6s ease-out forwards; }
+.anim-slide-bottom { animation: slideInFromBottom 0.5s ease-out forwards; }
+.anim-fade-scale { animation: fadeInScale 0.5s ease-out forwards; }
+
+/* Staggered delay classes */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+.delay-6 { animation-delay: 0.6s; }
+.delay-7 { animation-delay: 0.8s; }
+.delay-8 { animation-delay: 1.0s; }
+

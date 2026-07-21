@@ -1,0 +1,128 @@
+/* ===== TOUCH/TAP FEEDBACK ===== */
+
+/* App loading state */
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  color: #fff;
+  gap: 16px;
+}
+.app-loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: var(--primary, #ff6b35);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.nf-card:active {
+  transform: scale(0.97);
+  transition-duration: 0.1s;
+}
+.nf-btn-play:active, .nf-btn-info:active {
+  transform: scale(0.93);
+  transition-duration: 0.08s;
+}
+.nf-card-play:active, .nf-card-info-btn:active {
+  transform: scale(0.9);
+}
+.nav-btn:active {
+  transform: scale(0.9);
+  transition-duration: 0.08s;
+}
+.restart-btn:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Swipe hint on comic viewer */
+.comic-frame-wrapper::after {
+  content: 'Swipe or use arrow keys to navigate';
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  animation: fadeInOut 4s ease-in-out forwards;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .comic-frame-wrapper::after {
+    content: 'Swipe to navigate';
+  }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+/* Focus visible for keyboard users */
+.nav-btn:focus-visible,
+.nf-btn-play:focus-visible,
+.nf-btn-info:focus-visible,
+.nf-card:focus-visible,
+.nf-billboard-dot:focus-visible,
+.nf-row-arrow:focus-visible,
+.restart-btn:focus-visible,
+.progress-dot:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+
+/* Auto-play indicator */
+.autoplay-indicator {
+  position: absolute;
+  top: calc(24px + var(--safe-top));
+  left: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 14px;
+  border-radius: 100px;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid rgba(255,255,255,0.1);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.autoplay-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ECDC4;
+  animation: autoplay-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes autoplay-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
