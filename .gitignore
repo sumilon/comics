@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing/debug artifacts
+.playwright-mcp/
+screenshots/
+mobile-*.png
+nul
+
+# Working/temp files
+full-story-test.json
+scene-mapping-check.json
+test-results-data.json
+translation-data.json
+translation-batch-*.txt
