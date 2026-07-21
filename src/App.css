@@ -1,0 +1,9 @@
+/* KidTales - Styles split into modules for maintainability */
+@import './styles/base.css';
+@import './styles/LandingPage.css';
+@import './styles/ComicViewer.css';
+@import './styles/effects.css';
+@import './styles/animations.css';
+@import './styles/responsive.css';
+@import './styles/scenes.css';
+@import './styles/interactions.css';
